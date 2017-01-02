@@ -1,2 +1,2 @@
 # MEGAPI
-An MEGA API with additional features.
+A MEGA API with additional features.
