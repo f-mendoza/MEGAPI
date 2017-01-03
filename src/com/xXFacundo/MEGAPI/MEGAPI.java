@@ -1,25 +1,25 @@
 package com.xXFacundo.MEGAPI;
 
 import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+
 import com.Ale46.MegaJava.*;
 import org.json.*;
 
 public class MEGAPI {
-	SQLManager sql = new SQLManager("C:/Users/Facundo Mendoza/Desktop/data.db");
 	public static void main(String[] args){
-		MegaHandler mh = new MegaHandler("xxfacundo@hotmail.com","Facundo05");
+		EncDec ed = new EncDec();
 		try {
-			mh.login();
-		} catch (IOException e) {
+			ed.Encrypt("hola mundo");
+		} catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException
+				| BadPaddingException e) {
 			e.printStackTrace();
 		}
-		System.out.println(mh.get_user());
-	}
-	public List<String> ListAccounts(){
-		return sql.ListAccounts();
-	}
-	public void DownloadFile(String link){
-		
 	}
 }

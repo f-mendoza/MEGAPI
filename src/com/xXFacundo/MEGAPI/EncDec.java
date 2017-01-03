@@ -13,7 +13,7 @@ import java.util.Base64;
 
 public class EncDec {
 	final static String ALGO = "AES";
-	final static byte[] keyValue = {'C','3','m','6','B','1','U','l','M','d','g','y','Z','8','X','U'};
+	final static byte[] keyValue = {'C','3','m','6','B','1','U','l','M','d','g','y','Z','8','X','U','4','g','S','G','e','a','l'};
 	public String Encrypt(String Data) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException{
 		Key key = GenerateKey();
 		Cipher cipher = Cipher.getInstance(ALGO);
